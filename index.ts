@@ -1,4 +1,12 @@
 // IMPORTANTE:
 // Ver la consola de JavaScript
 
-let nombre: string = 'Fede';
+interface Personaje {
+  nombre: string;
+  hp: number;
+}
+
+const personaje: Personaje = {
+  nombre: 'Fedex',
+  hp: 50,
+};
