@@ -1,0 +1,310 @@
+:root{
+  --colorPrimario: #FF8B00;
+  --colorSecundario: #D57400 ;
+  --blanco: #fff;
+  --gris: #A9A9A9;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*scroll-snap-type: y mandatory;*/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /**Scroll
+
+  .navegacion-principal,
+  .apartados,
+  .formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }**/
+
+  body{
+    font-size: 16px;
+    font-family: 'Headland One', serif;
+    
+   background: linear-gradient(to top,var(--gris) 0%,var(--blanco)45%);
+
+   
+  }
+
+
+
+  h1{
+    font-size: 3.8rem;
+  }
+  h2{
+    font-size: 2.8rem;
+  }
+
+  h3{
+    font-size: 1.8rem;
+  }
+
+  h1,h2,h3{
+    text-align: center;
+  }
+
+  .contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    
+    
+  }
+
+  .sombra{
+    -webkit-box-shadow: 1.3px 1.5px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1.3px 1.5px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 1.3px 1.5px 5px -1px rgba(0,0,0,0.75);
+    border-radius: .5rem;
+
+    padding: 1.5rem;
+  }
+
+  .barra-bg{
+    background-color: var(--colorPrimario);
+    
+  }
+
+.navegacion-principal {
+display: flex;
+flex-direction: column;
+
+}
+.navegacion-principal a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 1000;
+  color: #fff;
+  
+  padding: 2rem;
+  transition: background-color .3s ease-in-out;
+  
+  
+}
+
+@media (min-width: 768px){
+  .navegacion-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+
+}
+
+
+  .hero{
+    background-image: url(../images/valery-sysoev-p9OkL4yW3C8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+
+    margin-bottom: 5rem;
+  }
+  .contenido-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+
+
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.navegacion-principal a{
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 1000;
+  color: #fff;
+  display: block;
+  padding: 2rem;
+  transition: background-color .3s ease-in-out;
+  
+  
+}
+.navegacion-principal a:hover{
+  background-color: var(--colorSecundario);
+  
+}
+
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+  
+}
+
+
+
+.contenido-hero p{
+  color: var(--blanco);
+}
+
+.ubicacion{
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.boton{
+  background-color: var(--colorPrimario);
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  padding: 2rem 4rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: .5rem;
+  width: 90%;
+  transition: background-color .3s ease-in-out;
+
+  border: none;
+}
+
+@media (min-width: 768px){
+  .boton{
+    width: auto;
+  }
+}
+
+
+.boton:hover{
+ background-color: var(--colorSecundario);
+}
+/**UTILIDADES**/
+
+.w-100{
+  width: 100%;
+}
+
+
+/* APARTADOS */
+/*.apartados{
+  display: grid;
+  grid-template-columns: repeat(3,33.3%);
+}*/
+
+.apartado{
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  align-items: center;
+  
+}
+
+.apartado p{
+  text-align: center;
+  line-height: 2.6rem;
+}
+
+.iconos{
+  display: flex;
+  background-color: var(--colorPrimario);
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+@media (min-width: 768px){
+  .apartados{
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    align-items: center;
+    
+  }
+}
+
+/*Formulario*/
+
+
+.formulario fieldset
+{
+  border: none;
+}
+
+.formulario{
+  background-color: var(--gris);
+  border-radius: 1rem;
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.error{
+  background-color: red;
+  padding: 1rem;
+  text-align: center;
+  color:  white;
+
+}
+
+.alerta{
+  background-color: green;
+  padding: 1rem;
+  text-align: center;
+  color:  white;
+}
+
+
+@media (min-width: 768px){
+  .campos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+  
+  }
+  .campo:nth-child(3),
+  .campo:nth-child(4){
+    grid-column: 1/3;
+  } 
+}
+
+.campo{
+  margin-bottom: 1rem;
+}
+
+.campo label{
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;
+  
+}
+
+.campo input{
+  border-radius: .5rem;
+  border: none;
+  height: 3.1rem;
+}
+
+.campo textarea{
+  height: 20rem;
+  border: none;
+  border-radius: .5rem;
+
+}
+
+footer{
+  text-align: center;
+}
